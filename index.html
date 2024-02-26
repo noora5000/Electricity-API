@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Sähkön kulutus ja tuotanto</title>
+  </head>
+
+  <body>
+    <p id="error"></p>
+    <form id="dataForm">
+          <h3>Search for electricity data</h3>
+          <label for = "start_time" class="start">Start:</label>
+          <label for = "end_time" class="end">End:</label><br>
+          <input type = "date" id = "start_time" name = "start_time">
+          <input type = "date" id = "end_time" name = "end_time">
+          <br><div class = "emptyrow"></div><br>
+          <fieldset>
+            <legend>Select dataset</legend>
+            <div>
+              <input type="radio" name="datasource" id="Electricity production in Finland" value="74"> 
+              <label for = "Electricity production in Finland">Electricity production in Finland</label>
+              <br>
+              <input type="radio" name="datasource" id="Electricity consumption in Finland" value="124"> 
+              <label for = "Electricity consumption in Finland">Electricity consumption in Finland</label>
+            </div>
+          </fieldset>
+      <div class = "buttons">
+          <input id="submit" type = "submit" value="Get data">
+      </div>
+    </form>
+    <div id="wrapper" class="wrapper"></div>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
